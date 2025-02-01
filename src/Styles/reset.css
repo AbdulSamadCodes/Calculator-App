@@ -1,80 +1,83 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-*::before,
-*::after {
-  content: "";
-  position: absolute;
-}
+  *::before,
+  *::after {
+    content: "";
+    position: absolute;
+  }
 
-li {
-  list-style: none;
-}
+  li {
+    list-style: none;
+  }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-button {
-  cursor: pointer;
-}
+  button {
+    cursor: pointer;
+  }
 
-button,
-a,
-input {
-  display: block;
-}
+  button,
+  a,
+  input {
+    display: block;
+  }
 
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-  object-fit:cover;
-  object-position:center;
-}
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
 
-button,
-input {
-  background: none;
-  border: none;
-  outline: none;
-}
+  button,
+  input {
+    background: none;
+    border: none;
+    outline: none;
+  }
 
-form,
-input,
-button,
-select,
-option,
-textarea {
-  font: inherit;
-}
+  form,
+  input,
+  button,
+  select,
+  option,
+  textarea {
+    font: inherit;
+  }
 
-input {
-  font-size: 1.2rem;
-}
+  input {
+    font-size: 1.2rem;
+  }
 
-input:focus-visible {
-  outline: none;
-}
+  input:focus-visible {
+    outline: none;
+  }
 
-:focus-visible {    
-  outline: 1px solid hsla(0, 0%, 0%, 0.4);
-  outline-offset: 0.4rem;
-}
+  :focus-visible {
+    outline: 1px solid hsla(0, 0%, 0%, 0.4);
+    outline-offset: 0.4rem;
+  }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 3rem;
-  scrollbar-width: thin;
-}
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    scrollbar-width: thin;
+  }
 
-body {
-  font-family: "Kumbh Sans", sans-serif;
-  overflow-x: hidden;
+  body {
+    font-family: "League Spartan", serif;
+    background-color: hsl(222, 26%, 31%);
+    overflow-x: hidden;
+  }
 }
