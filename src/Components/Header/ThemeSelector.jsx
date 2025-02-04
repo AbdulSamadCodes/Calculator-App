@@ -7,7 +7,7 @@ import { themePallete } from '/src/Constants/themePallete.js';
 function ThemeSelector() {
   const [currentTheme, setCurrentTheme] = useThemeContext();
   const themeBallRef = useRef(null);
-  
+
   const themes = Object.keys(themePallete);
   const totalThemes = themes.length;
 
