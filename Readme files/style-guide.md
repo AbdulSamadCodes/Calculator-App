@@ -66,6 +66,7 @@ The designs were created to the following widths:
 - Very dark violet (main background): hsl(268, 75%, 9%)
 - Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
 
+
 #### Keys
 
 - Dark violet (key background): hsl(281, 89%, 26%)
@@ -95,3 +96,4 @@ The designs were created to the following widths:
 - Weights: 700
 
 > 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
+

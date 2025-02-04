@@ -5,7 +5,7 @@ function Container() {
 
   return (
     <div className='container max-w-[500px] 
-     mx-auto mt-4 mb-4 px-4'>
+     mx-auto mt-4 mb-4 px-6'>
 
       <Header />
 
