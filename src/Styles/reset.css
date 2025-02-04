@@ -1,3 +1,9 @@
+:root {
+  --bg-default : #3a4764;
+  --bg-light : #e6e6e6;
+  --bg-dark : #160628;
+}
+
 @layer base {
   *,
   *::after,
@@ -13,24 +19,18 @@
     position: absolute;
   }
 
-  li {
-    list-style: none;
-  }
+  li { list-style: none; }
 
   a {
     text-decoration: none;
     color: inherit;
   }
 
-  button {
-    cursor: pointer;
-  }
+  button { cursor: pointer; }
 
   button,
   a,
-  input {
-    display: block;
-  }
+  input { display: block; }
 
   img {
     max-width: 100%;
@@ -52,17 +52,11 @@
   button,
   select,
   option,
-  textarea {
-    font: inherit;
-  }
+  textarea { font: inherit; }
 
-  input {
-    font-size: 1.2rem;
-  }
+  input { font-size: 1.2rem; }
 
-  input:focus-visible {
-    outline: none;
-  }
+  input:focus-visible { outline: none; }
 
   :focus-visible {
     outline: 1px solid hsla(0, 0%, 0%, 0.4);
@@ -77,7 +71,12 @@
 
   body {
     font-family: "League Spartan", serif;
-    background-color:  hsl(222, 26%, 31%);
     overflow-x: hidden;
   }
+
+  body:has(.theme-selector.default) {background-color: var(--bg-default); }
+
+  body:has(.theme-selector.light) {background-color: var(--bg-light); }
+
+  body:has(.theme-selector.dark) {background-color: var(--bg-dark); }
 }

@@ -7,7 +7,7 @@ import { themePallete } from '/src/Constants/themePallete.js';
 function ThemeSelector() {
   const [currentTheme, setCurrentTheme] = useThemeContext();
   const themeBallRef = useRef(null);
-
+  
   const themes = Object.keys(themePallete);
   const totalThemes = themes.length;
 
@@ -45,8 +45,8 @@ function ThemeSelector() {
 
       </div>
 
-      <div className='theme-selector relative
-       w-[4rem] py-[0.7rem] rounded-xl'
+      <div className={`theme-selector ${currentTheme} relative
+       w-[4rem] py-[0.7rem] rounded-xl`}
         style={{ backgroundColor: themePallete[currentTheme]['bg-toggler'] }}
       >
 
