@@ -10,17 +10,17 @@ function ThemeSelector() {
 
   const themes = Object.keys(themePallete);
   const totalThemes = themes.length;
-  
+
   const slideThemeBall = (themeIndex) => {
     const themeBall = themeBallRef?.current;
     const OFFSET = 5;
-    
+
     const position = themeBall.parentElement.previousElementSibling
-    .children[themeIndex].offsetLeft;
-    
+      .children[themeIndex].offsetLeft;
+
     themeBall.style.left = `${position + OFFSET}px`;
   }
-  
+
   const toggleTheme = () => {
     setCurrentTheme((prevTheme) => {
       const themeIndex = themes.findIndex(theme => theme === prevTheme);
@@ -58,7 +58,6 @@ function ThemeSelector() {
           ref={themeBallRef}
           onClick={toggleTheme}
         >
-
         </span>
 
       </div>
