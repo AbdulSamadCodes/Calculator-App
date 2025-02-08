@@ -3,6 +3,7 @@ const themePallete = {
   default: {
     'bg-toggler': '#232c43',
     'bg-theme_ball': '#d03f2f',
+    'bg-output_screen' : '#182034',  
 
     'text-primary' : '#ffffff'
   },
@@ -10,6 +11,7 @@ const themePallete = {
   light: {
     'bg-toggler': '#d1cccc',
     'bg-theme_ball': '#ca5502',
+    'bg-output_screen' : '#ededed',  
 
     'text-primary' : '#35352c',
   },
@@ -17,6 +19,7 @@ const themePallete = {
   dark: {
     'bg-toggler': '#1d0934',
     'bg-theme_ball': '#00e0d1',
+    'bg-output_screen' : '#1d0934',  
 
     'text-primary' : '#ffe53d',
   }

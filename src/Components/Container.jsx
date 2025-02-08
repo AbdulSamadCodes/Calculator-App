@@ -6,7 +6,7 @@ function Container() {
   
   return (
     <div className='container grid max-w-[500px] 
-     mx-auto pt-6 pb-6 px-6 gap-3'
+     mx-auto pt-6 pb-6 px-6 gap-10'
      >
       
       <Header />
