@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
 @layer components {
-  
+  .key-btn {
+    display: grid;
+    padding: 0.5rem;
+    font-weight: 800;
+    place-content: center;
+    border-radius: 0.5rem;
+  }
+
+  .basic-key { font-size: 1.2rem;  }
+
+  .utility-key {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .DEL-key {
+    grid-row: 1;
+    grid-column: 4;
+  }
+
+  .RESET-key,
+  .equals-key {
+    grid-column: span 2;
+  }
 }

@@ -9,10 +9,11 @@ function OutputScreen() {
   return (
     <div className='output-screen p-6 text-right 
      text-[1.8rem] text-white font-bold rounded-md'
+     
       style={
         { 
           color : themePallete[currentTheme]['text-primary'] ,
-          backgroundColor: themePallete[currentTheme]['bg-output_screen'] 
+          backgroundColor: themePallete[currentTheme]['bg-secondary'] 
         }
       }
     >

@@ -7,16 +7,16 @@ import { getCurrentTheme } from '/src/utilities/getCurrentTheme.js';
 import { moveSlideBall } from '/src/utilities/moveThemeBall.js';
 
 function ThemeSelector() {
-  const [theme, setTheme] = useThemeContext();
+  const [ currentTheme, setCurrentTheme ] = useThemeContext();
   const themeBallRef = useRef(null);
 
-  const currentTheme = getCurrentTheme(themePallete, theme);
+  const selectedTheme = getCurrentTheme(themePallete, currentTheme);
 
   const toggleTheme = () => {
-    setTheme(currentTheme);
+    setCurrentTheme(selectedTheme);
   };
 
-  moveSlideBall(themePallete ,theme , themeBallRef);
+  moveSlideBall(themePallete , currentTheme , themeBallRef);
 
   return (
     <div className='flex flex-col gap-y-1'>
@@ -31,15 +31,15 @@ function ThemeSelector() {
 
       </div>
 
-      <div className={`theme-selector ${theme} relative
+      <div className={`theme-selector ${currentTheme} relative
        w-[4rem] py-[0.7rem] rounded-xl`}
-        style={{ backgroundColor: themePallete[theme]['bg-toggler'] }}
+        style={{ backgroundColor: themePallete[currentTheme]['bg-primary'] }}
       >
 
         <span className='theme-ball absolute
          w-[20%] aspect-square top-[50%] left-[0.2rem]
          translate-y-[-50%]  rounded-full'
-          style={{ backgroundColor: themePallete[theme]['bg-theme_ball'] }}
+          style={{ backgroundColor: themePallete[currentTheme]['bg-theme_ball'] }}
 
           ref={themeBallRef}
           onClick={toggleTheme}

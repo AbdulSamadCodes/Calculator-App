@@ -5,7 +5,7 @@ import { Interface } from '/src/Components/Interface/Interface.jsx';
 function Container() {
   
   return (
-    <div className='container grid max-w-[500px] 
+    <div className='container grid max-w-[450px] 
      mx-auto pt-6 pb-6 px-6 gap-10'
      >
       
