@@ -1,18 +1,23 @@
 import React from 'react';
+
 import { useThemeContext } from '/src/hooks/useThemeContext.jsx';
 import { useOutputScreenContext } from '/src/hooks/useOutputScreenContext.jsx';
+import { useInputExpressionContext } from '/src/hooks/useInputExpressionContext.jsx';
 
 import { themePallete } from '/src/Constants/themePallete.js';
 
 function BasicKey({ keyText }) {
   const [ currentTheme ] = useThemeContext();
   const [ outputScreenText, setOutputScreenText ] = useOutputScreenContext();
-
+  const [ inputExpression , setInputExpression ] = useInputExpressionContext();
+    
   const handleKeyClick = (event) => {
     const operators = ['+', '-', 'x', '/'];
-
+    
     const { innerText: pressedValue } = event.target;
     
+    setInputExpression(prevExp => prevExp += pressedValue);
+
     if (operators.includes(pressedValue)) {
       setOutputScreenText('');
 
