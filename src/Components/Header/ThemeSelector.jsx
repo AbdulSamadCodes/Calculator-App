@@ -7,7 +7,7 @@ import { getCurrentTheme } from '/src/utilities/getCurrentTheme.js';
 import { moveSlideBall } from '/src/utilities/moveThemeBall.js';
 
 function ThemeSelector() {
-  const [ currentTheme, setCurrentTheme ] = useThemeContext();
+  const [currentTheme, setCurrentTheme] = useThemeContext();
   const themeBallRef = useRef(null);
 
   const selectedTheme = getCurrentTheme(themePallete, currentTheme);
@@ -16,14 +16,17 @@ function ThemeSelector() {
     setCurrentTheme(selectedTheme);
   };
 
-  moveSlideBall(themePallete , currentTheme , themeBallRef);
+  moveSlideBall(themePallete, currentTheme, themeBallRef);
 
   return (
     <div className='flex flex-col gap-y-1'>
 
       <div className='flex self-center
        items-center gap-x-4  text-white 
-       text-[0.7rem] font-bold relative'>
+       text-[0.7rem] font-bold relative'
+       
+        style={{ color: themePallete[currentTheme]['text-primary'] }}
+      >
 
         <span>1</span>
         <span>2</span>

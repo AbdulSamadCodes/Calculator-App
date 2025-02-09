@@ -8,7 +8,7 @@ function ThemeContextProvider({ children }) {
   const [ currentTheme , setCurrentTheme ] = useLocalStorage('theme' , 'default');
   
   return (
-    <ThemeContext.Provider value={{currentTheme , setCurrentTheme}}>
+    <ThemeContext.Provider value={{ currentTheme , setCurrentTheme }}>
       { children }
     </ ThemeContext.Provider>
   )
