@@ -15,7 +15,7 @@ function KeysPanel() {
     <div className='keys-panel grid grid-cols-4 gap-4 p-6 rounded-md'
       style={{ backgroundColor: themePallete[currentTheme]['bg-primary'] }}
     >
-
+      
       {
         basicKeys.map((keyText, index) => {
           return <BasicKey key={index} keyText={keyText} />

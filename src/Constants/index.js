@@ -10,6 +10,6 @@ export const  operations = {
   '-' : (num1 ,  num2) => num1 - num2,
   'x' : (num1 ,  num2) => num1 * num2,
   '/' : (num1 ,  num2) => num1 / num2,
-}
+};
 
 export const operators = ['+', '-', 'x', '/'];
