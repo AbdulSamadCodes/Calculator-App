@@ -16,6 +16,13 @@ function EqualsKey() {
     const result = calculateExpressionResult(inputExpression);
     const formattedResult = Intl.NumberFormat('en-IN').format(result);
 
+    if(isNaN(result)) {
+      setOutputScreenText('');
+      setInputExpression('');
+
+      return;
+    } 
+
     setOutputScreenText(formattedResult);
   };
   

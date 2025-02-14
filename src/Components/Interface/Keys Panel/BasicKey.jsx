@@ -7,32 +7,28 @@ import { useInputExpressionContext } from '/src/hooks/useInputExpressionContext.
 import { themePallete } from '/src/Constants/themePallete.js';
 import { operators } from '/src/Constants/index.js'
 
-import {calculateExpressionResult } from '/src/utilities/calculateExpressionResult.js'; 
-
 function BasicKey({ keyText }) {
-  const [ currentTheme ] = useThemeContext();
-  const [ outputScreenText, setOutputScreenText ] = useOutputScreenContext();
-  const [ inputExpression, setInputExpression ] = useInputExpressionContext();
+  const [currentTheme] = useThemeContext();
+  const [outputScreenText, setOutputScreenText] = useOutputScreenContext();
+  const [inputExpression, setInputExpression] = useInputExpressionContext();
 
   const handleKeyClick = (event) => {
     const { innerText: pressedValue } = event.target;
 
     setInputExpression(prevExp => {
-      if (operators.includes(prevExp.at(-1)) && operators.includes (pressedValue))
+      if (operators.includes(prevExp.at(-1)) && operators.includes(pressedValue))
         return prevExp;
 
       return prevExp += pressedValue;
     });
 
-    if (operators.includes(pressedValue)) {
-      setOutputScreenText('');
+    setOutputScreenText((prevText) => {
+      if (operators.includes(prevText.at(-1)) && operators.includes(pressedValue))
+        return prevText;
 
-      return;
-    }
-
-    setOutputScreenText((prevText) =>
-      prevText += pressedValue);
-  };
+      return prevText += pressedValue
+    })
+};
 
   return (
     <button className='key-btn basic-key'
