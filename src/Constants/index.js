@@ -11,3 +11,5 @@ export const  operations = {
   'x' : (num1 ,  num2) => num1 * num2,
   '/' : (num1 ,  num2) => num1 / num2,
 }
+
+export const operators = ['+', '-', 'x', '/'];

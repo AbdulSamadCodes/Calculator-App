@@ -5,18 +5,22 @@ import { useOutputScreenContext } from '/src/hooks/useOutputScreenContext.jsx';
 import { useInputExpressionContext } from '/src/hooks/useInputExpressionContext.jsx';
 
 import { themePallete } from '/src/Constants/themePallete.js';
+import { operators } from '/src/Constants/index.js'
 
 function BasicKey({ keyText }) {
   const [ currentTheme ] = useThemeContext();
   const [ outputScreenText, setOutputScreenText ] = useOutputScreenContext();
-  const [ inputExpression , setInputExpression ] = useInputExpressionContext();
-    
+  const [ inputExpression, setInputExpression ] = useInputExpressionContext();
+
   const handleKeyClick = (event) => {
-    const operators = ['+', '-', 'x', '/'];
-    
     const { innerText: pressedValue } = event.target;
-    
-    setInputExpression(prevExp => prevExp += pressedValue);
+
+    setInputExpression(prevExp => {
+      if (operators.includes(prevExp.at(-1)) && operators.includes (pressedValue))
+        return prevExp;
+
+      return prevExp += pressedValue;
+    });
 
     if (operators.includes(pressedValue)) {
       setOutputScreenText('');
@@ -24,7 +28,8 @@ function BasicKey({ keyText }) {
       return;
     }
 
-    setOutputScreenText((prevText) => prevText+=pressedValue);
+    setOutputScreenText((prevText) =>
+      prevText += pressedValue);
   };
 
   return (
