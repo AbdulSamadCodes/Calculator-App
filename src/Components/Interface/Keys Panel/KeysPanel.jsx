@@ -21,6 +21,7 @@ function KeysPanel() {
 
   const handleDEL = () => {
     setOutputScreenText(prevExp => deleteExpression(prevExp));
+    setInputExpression(prevExp => deleteExpression(prevExp));
   }
 
   const handleReset = () => {

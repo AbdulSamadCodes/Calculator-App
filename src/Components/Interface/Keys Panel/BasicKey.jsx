@@ -15,7 +15,7 @@ function BasicKey({ keyText }) {
   const handleKeyClick = (event) => {
     const { innerText: pressedValue } = event.target;
 
-    setInputExpression(prevExp => {
+    setInputExpression((prevExp) => {
       if (operators.includes(prevExp.at(-1)) && operators.includes(pressedValue))
         return prevExp;
 

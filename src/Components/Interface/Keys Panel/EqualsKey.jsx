@@ -18,12 +18,12 @@ function EqualsKey() {
 
     if(isNaN(result)) {
       setOutputScreenText('');
-      setInputExpression('');
 
       return;
     } 
 
     setOutputScreenText(formattedResult);
+    setInputExpression(result.toString());
   };
   
   return (
